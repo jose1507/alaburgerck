@@ -1,13 +1,14 @@
 <?php
 require 'config.php';
-$consulta = mysqli_query($conectar, "SELECT * FROM posts ");
+$consulta = mysqli_query($conectar, "SELECT * FROM empleados ");
 
 $ver = mysqli_num_rows($consulta);
 $lista = array();
 
 if ($ver > 0) {
     while ($datos = mysqli_fetch_assoc($consulta)) {
-        $fila = array('title' => $datos['title'], 'body' => $datos['body']);
+        $fila = array('fecha_de_nacimiento' => $datos['fecha_de_nacimiento'], 'nombre' => $datos['nombre'],'telefono' => $datos['telefono']
+        );
 
         array_push($lista, $fila);
     }
