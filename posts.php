@@ -1,5 +1,5 @@
 <?php
-require 'config2.php';
+require 'config.php';
 $consulta = mysqli_query($conectar, "SELECT * FROM posts ");
 
 $ver = mysqli_num_rows($consulta);
